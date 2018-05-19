@@ -115,6 +115,17 @@ html, body{
 	background-color:cyan;
 }
 
+#Second-Block .card-body tr:click {
+	color: white;
+	background-color:cyan;
+}
+
+
+#Second-Block .card-body tr {
+	padding: 0;
+	margin: 0;
+}
+
 #Second-Block .card-body th:state{
 	color: red;
 }

@@ -1,0 +1,157 @@
+@import url('bootstrap.css');
+
+html, body{
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	width: 100%;
+}
+
+.intro {
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	background: url("img/bg2.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	color: grey;
+	display: table;
+	top: 0;
+}
+
+.intro .inner {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	padding-bottom: 10%;
+}
+
+.content h1 {
+	color: #F9F3F4;
+	text-shadow:3px 3px black;
+	font-size: 650%;
+	max-width: 2000px;
+	padding-bottom: 100px
+}
+
+.intro .inner .btn {
+	font-size: 300%;
+	color: #F9F3F4;
+	text-shadow:3px 3px black;
+	border: 2px solid white;
+	padding: 20px 20px;
+	border-radius: 10px;
+}
+
+.intro .inner .btn:hover{
+	color: cyan;
+	border: 2px solid cyan;
+}
+
+#main-body-Section {
+	width: 100%;
+	height: 4000px;
+	margin: auto;
+}
+
+#main-body-Section .jumbotron {
+	height: 100%;
+	width: 100%;
+	color: black;
+}
+
+#First-Block {
+	width: 87%;
+	height: 12.5%;
+	padding: 0;
+	margin: auto;
+}
+
+#First-Block .display-3 {
+	text-align: center;
+	font-size: 420%;
+}
+
+#First-Block .text-body {
+	width: 90%;
+	height: 80%;
+	margin: auto;
+	color: black;
+}
+#First-Block .text-body p {
+	color: black;
+	text-indent: 25px;
+	font-size: 150%;
+}
+
+#Second-Block {
+	width: 90%;
+	height: 76%;
+	margin: auto;
+	color: black;
+	margin-top: 25px;
+}
+
+#Second-Block .display-3 {
+	text-align: center;
+	font-size: 420%;
+}
+
+#Second-Block .text-body {
+	width: 90%;
+	height: 80%;
+	margin: auto;
+	color: black;
+}
+#Second-Block .text-body .form-control {
+	background-color: white;
+}
+
+#Second-Block .text-body .card {
+	height: 100%;
+}
+
+#Second-Block .card-body tr:hover {
+	color: white;
+	background-color:cyan;
+}
+
+#Second-Block .card-body th:state{
+	color: red;
+}
+
+#go-button {
+	margin: auto;
+	margin-top: 75px;
+	width: 50%;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

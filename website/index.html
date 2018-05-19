@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <link href="css/animate.css" rel="stylesheet"/>
+    <link href="css/waypoints.css" rel="stylesheet"/>
+    <script src="js/jquery.waypoints.min.js" type="text/javascript"></script>
+    <script src="js/waypoints.js" type="text/javascript"></script>
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
+    <!-- Bootstrap -->
+    <link href="css/page1.css" rel="stylesheet">
+    <!-- JavaScript files-->
+    <script src="index.js"> </script>
+    <title>EECS 338 Project</title>
+  </head>
+  <body>
+    <section class="intro">
+      <div class="inner">
+        <div class="content">
+          <section class="os-animation" data-os-animation="bounceInUp" data-os-animation-delay="0s">
+            <h1>Congressional Tweetcast </h1>
+          </section>
+          <section class="os-animation" data-os-animation="bounceInUp" data-os-animation-delay=".1s">
+            <a href ="#main-body-Section" id="main-body" class="btn"> ENTER </a>
+          </section>
+        </div>
+      </div>
+    </section>
+    <div id = "main-body-Section">
+      <div class="jumbotron">
+        <div id = "First-Block">
+            <h1 class="display-3">What is Congressional TweetCast?</h1>
+            <hr class="my-4">
+            <div class="text-body">
+              <p>Congressional TweetCast is a Computer Science project made at Northwestern Universtiy in Evanston IL.</p>
+              <p>This is a tool for political and electoral research.  How it works is simple: users enter in a twitter handle and select a specfiic congressional election.</p>
+              <p>This website will then deploy sophisiticated algorithms to analyze the inputted twitter user's tweets, and tell you - the user - which candidate the inputted twitter handle will vote for in the specified election.</p>
+              <p>Our algorithms are built off tweetpy, machine learning in python (more specifically text analysis through a Naive Bayes Classifier), as well as your standard web tools like HTML, JavaScript, Node.js, and some lovely animations.</p>
+              <p>Please don't abuse this tool.</p>
+              <hr class="my-4">
+          </div>
+      </div>
+      <div id = Second-Block>
+          <h1 class="display-3">On Your Mark...Get Set...Predict</h1>
+            <hr class="my-4">
+            <div class="text-body">
+              <div class="form-group">
+                    <label class="col-form-label" for="inputDefault">Enter a Public Twitter User:</label>
+                    <input type="text" class="form-control" placeholder="@realDonalTrump, @BarackObama, @KimKardashian ..." id="inputDefault">
+              </div>
+              <div class="card text-white bg-primary mb-3">
+                  <div class="card-header">Choose An Election</div>
+                  <div class="card-body">
+              
+                   <table class="table table-hover">
+                          <thead>
+                              <colgroup>
+                                <col style="background-color:#fff">
+                                <col style="background-color:#1F9BCF">
+                                <col style="background-color:#d9534f">
+                              </colgroup>
+                          </thead>
+                          <tbody>
+                            <tr class="table-active">
+                              <td>Alabama</td>
+                              <td>Ron Crumpton </td>
+                              <td>Richard Shelby </td>
+                            </tr>
+                            <tr class="table-active">
+                              <td>Alaska</td>
+                              <td>Ray Matcalfe </td>
+                              <td>Lisa Murkowski </td>
+                            </tr>
+                            <tr class="table-active">
+                              <td>Arizona</td>
+                              <td>Ann Kirkpatrick </td>
+                              <td>John McCain</td>
+                            </tr>
+                            <tr class="table-active">
+                              <td>Arkansas</td>
+                              <td>Conner Eldridge </td>
+                              <td>John Boozman </td>
+                            </tr>
+                            <tr class="table-active">
+                              <td>California</td>
+                              <td>Kamala Harris </td>
+                              <td>None </td>
+                            </tr>
+                            <tr class="table-active">
+                              <td>Colorodo</td>
+                              <td>Michael Bennet </td>
+                              <td>Daryl Glenn </td>
+                            </tr>
+                            <tr class="table-active">
+                              <td>Connecticut</td>
+                              <td>Richard Blument </td>
+                              <td>Dan Carter </td>
+                            </tr>
+                            <tr class="table-active">
+                              <td>Florida</td>
+                              <td>Patrick Murphy </td>
+                              <td>Marco Rubio </td>
+                            </tr>
+                            <tr class="table-active">
+                              <td>Georiga</td>
+                              <td>Jim Barksdale </td>
+                              <td>Johnny Isakson </td>
+                            </tr>
+                            <tr class="table-active">
+                              <td>Hawaii</td>
+                              <td>Brian Schatz </td>
+                              <td>John Carroll </td>
+                            </tr>
+                            <tr class="table-active">
+                              <td>Idaho</td>
+                              <td>Jerry Sturgill </td>
+                              <td>Mike Crapo </td>
+                            </tr>
+                            <tr class="table-active">
+                              <td>Illinois</td>
+                              <td>Tammy Duckworth </td>
+                              <td>Mark Kirk </td>
+                            </tr>
+                            <tr class="table-active">
+                              <td>Indiana</td>
+                              <td>Todd Young</td>
+                              <td>Dan Coats</td>
+                            </tr>
+                            <tr class="table-active">
+                              <td>Iowa</td>
+                              <td>Patty Judge </td>
+                              <td>Chuck Grassley </td>
+                            </tr>
+                            <tr class="table-active">
+                              <td>Kansas</td>
+                              <td>Patrick Wiesner</td>
+                              <td>Jerry Moran </td>
+                            </tr>
+                            <tr class="table-active">
+                              <td>Kentucky</td>
+                              <td>Rand Paul </td>
+                              <td>Jim Grey </td>
+                            </tr>
+                            <tr class="table-active">
+                              <td>Louisana</td>
+                              <td>Foster Campbell </td>
+                              <td>John N. Kennedy </td>
+                            </tr>
+                            <tr class="table-active">
+                              <td>Maryland</td>
+                              <td>Chris Van Hollen </td>
+                              <td>Kathy Szeliga</td>
+                            </tr>
+                            <tr class="table-active">
+                              <td>Missouri</td>
+                              <td>Jason Kander </td>
+                              <td>Roy Bunt </td>
+                            </tr>
+                            <tr class="table-active">
+                              <td>Nevada</td>
+                              <td>Joe Heck </td>
+                              <td>Catherina Cotez </td>
+                            </tr>
+                            <tr class="table-active">
+                              <td>New Hampshire</td>
+                              <td>Maggie Hassan </td>
+                              <td>Kelly Ayotte </td>
+                            </tr>
+                            <tr class="table-active">
+                              <td>New York</td>
+                              <td>Chuck Schumer </td>
+                              <td>Wendy Long </td>
+                            </tr>
+                            <tr class="table-active">
+                              <td>North Carolina</td>
+                              <td>Deborah Ross </td>
+                              <td>Richard Burr </td>
+                            </tr>
+                            <tr class="table-active">
+                              <td>Ohio</td>
+                              <td>Ted Strickland </td>
+                              <td>Rob Portman </td>
+                            </tr>
+                            <tr class="table-active">
+                              <td>Oklahoma</td>
+                              <td>Mike Workman </td>
+                              <td>James Lankford </td>
+                            </tr>
+                            <tr class="table-active">
+                              <td>Oregon</td>
+                              <td>Ron Wyden </td>
+                              <td>Mark Callahan </td>
+                            </tr>
+                            <tr class="table-active">
+                              <td>Pennsylvania</td>
+                              <td>Kate McGinty </td>
+                              <td>Pat Toomey </td>
+                            </tr>
+                            <tr class="table-active">
+                              <td>South Carolina</td>
+                              <td>Thomas Dixon </td>
+                              <td>Tim Scott </td>
+                            </tr>
+                            <tr class="table-active">
+                              <td>South Dakota</td>
+                              <td>Jay Williams </td>
+                              <td>John Thune </td>
+                            </tr>
+                            <tr class="table-active">
+                              <td>Utah</td>
+                              <td>Mike K. Snow </td>
+                              <td>Mike Lee </td>
+                            </tr> 
+                            <tr class="table-active">
+                              <td>Vermont</td>
+                              <td>Patrick Leahy </td>
+                              <td>Scott Milne </td>
+                            </tr> 
+                            <tr class="table-active">
+                              <td>Washington</td>
+                              <td>Patty Murray </td>
+                              <td>Chris Vance </td>
+                            </tr> 
+                            <tr class="table-active">
+                              <td>Wisconsin</td>
+                              <td>Russ Feingold</td>
+                              <td>Ron Johnson</td>
+                            </tr>                    
+                          </tbody>
+                     </table> 
+
+                     <button id = "go-button" type="button" class="btn btn-danger btn-lg btn-block">Predict</button>
+
+
+
+
+
+
+
+
+
+                  </div>
+              </div>
+
+
+              <hr class="my-4">
+          </div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+  </body>
+</html>

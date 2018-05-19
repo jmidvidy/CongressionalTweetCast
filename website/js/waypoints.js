@@ -30,6 +30,7 @@ $(function(){
 
 //also use to election
 var prev;
+var selected;
 
 //table hovering
 $(function () {
@@ -40,6 +41,20 @@ $(function () {
         //update new selection
         $(this).css('background-color', 'cyan');
         prev = this;
+        selected = prev.id;
+    });
+});
+
+//run button submission
+$(function () {
+    $("#go-button").click(function () {
+        
+        //gets the value of the twitter-handle
+        var twitter_handle = $('#inputDefault').val();
+
+        //use global selected
+        election = selected;
+        alert("twitter_handle: " + twitter_handle + " | Election: " + election);
     });
 });
 
@@ -57,5 +72,8 @@ $(function (){
        },1000);
     });
 });
+
+
+
 
 

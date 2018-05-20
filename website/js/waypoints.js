@@ -1,33 +1,3 @@
-//intro animation
-$(function(){
-    function onScrollInit( items, trigger ) {
-        items.each( function() {
-        var osElement = $(this),
-            osAnimationClass = osElement.attr('data-os-animation'),
-            osAnimationDelay = osElement.attr('data-os-animation-delay');
-          
-            osElement.css({
-                '-webkit-animation-delay':  osAnimationDelay,
-                '-moz-animation-delay':     osAnimationDelay,
-                'animation-delay':          osAnimationDelay
-            });
-
-            var osTrigger = ( trigger ) ? trigger : osElement;
-            
-            osTrigger.waypoint(function() {
-                osElement.addClass('animated').addClass(osAnimationClass);
-                },{
-                    triggerOnce: true,
-                    offset: '80%'
-            });
-        });
-    }
-
-    onScrollInit( $('.os-animation') );
-    onScrollInit( $('.staggered-animation'), $('.staggered-animation-container') );
-});//]]>  
-
-
 //also use to election
 var prev;
 var selected;
@@ -37,9 +7,10 @@ $(function () {
     $(".card-body tr").click(function () {
         //change previous selection to original color
         $(prev).css('background-color', '')
+        //add deselector later
 
         //update new selection
-        $(this).css('background-color', 'cyan');
+        $(this).css('background-color', '#f0ad4e');
         prev = this;
         selected = prev.id;
     });
@@ -54,7 +25,25 @@ $(function () {
 
         //use global selected
         election = selected;
-        alert("twitter_handle: " + twitter_handle + " | Election: " + election);
+        //alert("twitter_handle: " + twitter_handle + " | Election: " + election);
+
+        //external call to python
+        $.ajax({
+              data: {
+                'twitter_handle' : twitter_handle,
+                'election'  : election
+              },
+              type: 'POST',
+              success: function(da){
+                alert(da);
+              },
+              url: "/C:/Users/jmidv/Documents/Spring 2018/EECS 338/backend/ajax_caller.py",
+
+            }).done(function(data) {
+              // alert( data   );
+            });
+
+
     });
 });
 

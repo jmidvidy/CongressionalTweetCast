@@ -2,6 +2,24 @@
 var prev;
 var selected;
 
+//smooth scroll implementation
+$(document).ready(function(){
+
+    $("#enter-button").click(function(e){
+
+        //don't jump
+        e.preventDefault();
+
+        //enter button is this
+        var scrollTo = $(this).attr('href');
+      //  console.log($(scrollTo).offset().top);
+
+       $("html, body").animate({
+            scrollTop: $(scrollTo).offset().top
+        },1000);
+    });
+});
+
 //table hovering
 $(function () {
     $(".card-body tr").click(function () {

@@ -107,7 +107,7 @@ html, body{
 }
 
 #Second-Block .text-body .card {
-	height: 100%;
+	height: 71%;
 }
 
 #Second-Block .card-body tr:hover {
@@ -124,17 +124,20 @@ html, body{
 #Second-Block .card-body tr {
 	padding: 0;
 	margin: 0;
+	box-sizing: content-box;
+	line-height: .1px;
 }
 
 #Second-Block .card-body th:state{
 	color: red;
 }
 
+#Second-Block 
+
 #go-button {
 	margin: auto;
 	margin-top: 75px;
 	width: 50%;
-
 }
 
 

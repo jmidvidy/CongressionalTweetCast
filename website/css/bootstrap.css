@@ -1670,7 +1670,6 @@ pre code {
 .table td {
   padding: 0.75rem;
   vertical-align: top;
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .table thead th {

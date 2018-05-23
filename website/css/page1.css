@@ -85,10 +85,11 @@ html, body{
 
 #Second-Block {
 	width: 90%;
-	height: 76%;
+	height: 54%;
 	margin: auto;
 	color: black;
 	margin-top: 25px;
+	margin-bottom: 15rem;	
 }
 
 #Second-Block .display-3 {
@@ -107,7 +108,7 @@ html, body{
 }
 
 #Second-Block .text-body .card {
-	height: 71%;
+	height: 100%;
 }
 
 #Second-Block .card-body tr:hover {
@@ -132,13 +133,82 @@ html, body{
 	color: red;
 }
 
-#Second-Block 
+ 
 
 #go-button {
 	margin: auto;
 	margin-top: 75px;
 	width: 50%;
 }
+
+#Third-Block {
+	height: 30%;
+	width: 90%;
+	margin: auto;
+}
+
+#Predict-Block {
+	width: 90%;
+	height: 80%;
+	margin: auto;
+	margin-top: 10%;
+	border: 1px solid black;
+}
+
+#hot-words {
+	width:30%;
+	height: 61%;
+	margin: auto;
+}
+
+#hot-words .table {
+	margin-bottom: 0;
+	color: black;
+}
+
+#hot-words .card-body {
+	height:2%;
+}
+
+#Third-Block .card-body tr {
+	padding: 0;
+	margin: 0;
+	box-sizing: content-box;
+	line-height: .1px;
+	text-align: center;
+}
+
+#hot-words table {
+	border:1px solid black;
+}
+
+#hot-words thead {
+	border:1px solid black;
+}
+
+#hot-words td.state {
+	padding-right: .05rem;
+	padding-left: .05rem;
+}
+
+#Predict-Block{
+	margin-top: 10px;
+}
+
+#predict-title {
+	text-align: center;
+	padding-top: 2rem;
+	margin: auto;
+	font-size: 320%;
+}
+
+#predict-result {
+	text-align: center;
+	margin-bottom: 5rem;
+	font-size: 250%;
+
+}
+
 
 
 

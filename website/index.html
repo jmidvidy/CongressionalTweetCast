@@ -9,6 +9,7 @@
     <link href="css/animate.css" rel="stylesheet"/>
     <script src="js/jquery.js" type="text/javascript"></script>
     <script src="js/waypoints.js" type="text/javascript"></script>
+    <add name="Access-Control-Allow-Origin" value="http://localhost:8000/ajax_tester.py" />
    
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     
@@ -45,7 +46,7 @@
               <hr class="my-4">
           </div>
       </div>
-      <div id = Second-Block>
+      <div id ="Second-Block">
           <h1 class="display-3">On Your Mark...Get Set...Predict</h1>
             <hr class="my-4">
             <div class="text-body">
@@ -65,184 +66,244 @@
                               </colgroup>
                           </thead>
                           <tbody>
-                            <tr id ="Alabama" class="table-active">
-                              <td>Alabama</td>
+                            <tr id="none-SenShelby" class="table-active">
+                              <td class="state">Alabama</td>
                               <td>Ron Crumpton </td>
                               <td>Richard Shelby </td>
                             </tr>
-                            <tr id ="Alaska"class="table-active">
-                              <td>Alaska</td>
-                              <td>Ray Matcalfe </td>
-                              <td>Lisa Murkowski </td>
+                            <tr id="none-lisamurkowski"class="table-active">
+                              <td class="state">Alaska</td>
+                              <td class="dc">Ray Matcalfe </td>
+                              <td class= "rc">Lisa Murkowski </td>
                             </tr>
-                            <tr id ="Arizona"class="table-active">
-                              <td>Arizona</td>
-                              <td>Ann Kirkpatrick </td>
-                              <td>John McCain</td>
+                            <tr id ="Ann_Kirkpatrick-SenJohnMcCain"class="table-active">
+                              <td class="state" >Arizona</td>
+                              <td class="dc">Ann Kirkpatrick </td>
+                              <td class= "rc">John McCain</td>
                             </tr>
-                            <tr id ="Arkansas"class="table-active">
-                              <td>Arkansas</td>
-                              <td>Conner Eldridge </td>
-                              <td>John Boozman </td>
+                            <tr id ="ConnerforAR-JohnBoozman"class="table-active">
+                              <td class="state">Arkansas</td>
+                              <td class="dc">Conner Eldridge </td>
+                              <td class= "rc">John Boozman </td>
                             </tr>
-                            <tr id ="California"class="table-active">
-                              <td>California</td>
-                              <td>Kamala Harris </td>
-                              <td>None </td>
+                            <tr id ="KamalaHarris-none"class="table-active">
+                              <td class="state">California</td>
+                              <td class="dc">Kamala Harris </td>
+                              <td class= "rc">Unopposed </td>
                             </tr>
-                            <tr id ="Colorodo"class="table-active">
-                              <td>Colorodo</td>
-                              <td>Michael Bennet </td>
-                              <td>Daryl Glenn </td>
+                            <tr id ="SenBennetCO-DarrylLGlenn"class="table-active">
+                              <td class="state">Colorodo</td>
+                              <td class="dc">Michael Bennet </td>
+                              <td class= "rc">Daryl Glenn </td>
                             </tr>
-                            <tr id ="Connecticut"class="table-active">
-                              <td>Connecticut</td>
-                              <td>Richard Blument </td>
-                              <td>Dan Carter </td>
+                            <tr id ="SenBlumenthal-none"class="table-active">
+                              <td class="state">Connecticut</td>
+                              <td class="dc">Richard Blument </td>
+                              <td class= "rc">Dan Carter </td>
                             </tr>
-                            <tr id ="Florida"class="table-active">
-                              <td>Florida</td>
-                              <td>Patrick Murphy </td>
-                              <td>Marco Rubio </td>
+                            <tr id ="PatrickMurphyFL-marcorubio"class="table-active">
+                              <td class="state">Florida</td>
+                              <td class="dc">Patrick Murphy </td>
+                              <td class= "rc">Marco Rubio </td>
                             </tr>
-                            <tr id ="Georiga"class="table-active">
-                              <td>Georiga</td>
-                              <td>Jim Barksdale </td>
-                              <td>Johnny Isakson </td>
+                            <tr id ="jimbarksdale-SenatorIsakson"class="table-active">
+                              <td class="state">Georiga</td>
+                              <td class="dc">Jim Barksdale </td>
+                              <td class= "rc">Johnny Isakson </td>
                             </tr>
-                            <tr id ="Hawaii"class="table-active">
-                              <td>Hawaii</td>
-                              <td>Brian Schatz </td>
-                              <td>John Carroll </td>
+                            <tr id ="brianschatz-none"class="table-active">
+                              <td class="state">Hawaii</td>
+                              <td class="dc">Brian Schatz </td>
+                              <td class= "rc">John Carroll </td>
                             </tr>
-                            <tr id ="Idaho"class="table-active">
-                              <td>Idaho</td>
-                              <td>Jerry Sturgill </td>
-                              <td>Mike Crapo </td>
+                            <tr id ="none-MikeCrapo"class="table-active">
+                              <td class="state">Idaho</td>
+                              <td class="dc">Jerry Sturgill </td>
+                              <td class= "rc">Mike Crapo </td>
                             </tr>
-                            <tr id ="Illinois"class="table-active">
-                              <td>Illinois</td>
-                              <td>Tammy Duckworth </td>
-                              <td>Mark Kirk </td>
+                            <tr id ="SenDuckworth-SenatorKirk"class="table-active">
+                              <td class="state">Illinois</td>
+                              <td class="dc">Tammy Duckworth </td>
+                              <td class= "rc">Mark Kirk </td>
                             </tr>
-                            <tr id ="Indiana"class="table-active">
-                              <td>Indiana</td>
-                              <td>Todd Young</td>
-                              <td>Dan Coats</td>
+                            <tr id ="SenToddYoung-SenatorKirk"class="table-active">
+                              <td class="state">Indiana</td>
+                              <td class="dc">Todd Young</td>
+                              <td class= "rc">Dan Coats</td>
                             </tr>
-                            <tr id ="Iowa"class="table-active">
-                              <td>Iowa</td>
-                              <td>Patty Judge </td>
-                              <td>Chuck Grassley </td>
+                            <tr id ="pattyforiowa-ChuckGrassley"class="table-active">
+                              <td class="state">Iowa</td>
+                              <td class="dc">Patty Judge </td>
+                              <td class= "rc">Chuck Grassley </td>
                             </tr>
-                            <tr id ="Kansas"class="table-active">
-                              <td>Kansas</td>
-                              <td>Patrick Wiesner</td>
-                              <td>Jerry Moran </td>
+                            <tr id ="none-JerryMoran"class="table-active">
+                              <td class="state">Kansas</td>
+                              <td class="dc">Patrick Wiesner</td>
+                              <td class= "rc">Jerry Moran </td>
                             </tr>
-                            <tr id ="Kentucky"class="table-active">
-                              <td>Kentucky</td>
-                              <td>Rand Paul </td>
-                              <td>Jim Grey </td>
+                            <tr id ="RandPaul-JimGrayLexKY"class="table-active">
+                              <td class="state">Kentucky</td>
+                              <td class="dc">Rand Paul </td>
+                              <td class= "rc">Jim Grey </td>
                             </tr>
-                            <tr id ="Louisana"class="table-active">
-                              <td>Louisana</td>
-                              <td>Foster Campbell </td>
-                              <td>John N. Kennedy </td>
+                            <tr id ="CampbellforLa-SenJohnKennedy"class="table-active">
+                              <td class="state">Louisana</td>
+                              <td class="dc">Foster Campbell </td>
+                              <td class= "rc">John N. Kennedy </td>
                             </tr>
-                            <tr id ="Maryland"class="table-active">
-                              <td>Maryland</td>
-                              <td>Chris Van Hollen </td>
-                              <td>Kathy Szeliga</td>
+                            <tr id ="ChrisVanHollen-KathyforMD"class="table-active">
+                              <td class="state">Maryland</td>
+                              <td class="dc">Chris Van Hollen </td>
+                              <td class= "rc">Kathy Szeliga</td>
                             </tr>
-                            <tr id ="Missouri"class="table-active">
-                              <td>Missouri</td>
-                              <td>Jason Kander </td>
-                              <td>Roy Bunt </td>
+                            <tr id ="JasonKander-RoyBlunt"class="table-active">
+                              <td class="state">Missouri</td>
+                              <td class="dc">Jason Kander </td>
+                              <td class= "rc">Roy Bunt </td>
                             </tr>
-                            <tr id ="Nevada"class="table-active">
-                              <td>Nevada</td>
-                              <td>Joe Heck </td>
-                              <td>Catherina Cotez </td>
+                            <tr id ="none-CatherinaCotez"class="table-active">
+                              <td class="state">Nevada</td>
+                              <td class="dc">Joe Heck </td>
+                              <td class= "rc">Catherina Cotez </td>
                             </tr>
-                            <tr id ="New Hampshire"class="table-active">
-                              <td>New Hampshire</td>
-                              <td>Maggie Hassan </td>
-                              <td>Kelly Ayotte </td>
+                            <tr id ="SenatorHassan-KellyAyotte"class="table-active">
+                              <td class="state">New Hampshire</td>
+                              <td class="dc">Maggie Hassan </td>
+                              <td class="rc">Kelly Ayotte </td>
                             </tr>
-                            <tr id ="New York"class="table-active">
-                              <td>New York</td>
-                              <td>Chuck Schumer </td>
-                              <td>Wendy Long </td>
+                            <tr id ="SenSchumer-WendyLongNY"class="table-active">
+                              <td class="state">New York</td>
+                              <td class="dc">Chuck Schumer </td>
+                              <td class= "rc">Wendy Long </td>
                             </tr>
-                            <tr id ="North Carolina"class="table-active">
-                              <td>North Carolina</td>
-                              <td>Deborah Ross </td>
-                              <td>Richard Burr </td>
+                            <tr id ="DeborahRossNC-SenatorBurr"class="table-active">
+                              <td class="state">North Carolina</td>
+                              <td class="dc">Deborah Ross </td>
+                              <td class= "rc">Richard Burr </td>
                             </tr>
-                            <tr id ="Ohio"class="table-active">
-                              <td>Ohio</td>
-                              <td>Ted Strickland </td>
-                              <td>Rob Portman </td>
+                            <tr id ="Ted_Strickland-SenRobPortman"class="table-active">
+                              <td class="state">Ohio</td>
+                              <td class="dc">Ted Strickland </td>
+                              <td class="rc">Rob Portman </td>
                             </tr>
-                            <tr id ="Oklahoma"class="table-active">
-                              <td>Oklahoma</td>
-                              <td>Mike Workman </td>
-                              <td>James Lankford </td>
+                            <tr id ="none-SenatorLankford"class="table-active">
+                              <td class="state">Oklahoma</td>
+                              <td class="dc">Mike Workman </td>
+                              <td class= "rc">James Lankford </td>
                             </tr>
-                            <tr id ="Oregon"class="table-active">
-                              <td>Oregon</td>
-                              <td>Ron Wyden </td>
-                              <td>Mark Callahan </td>
+                            <tr id ="RonWyden-none"class="table-active">
+                              <td class="state">Oregon</td>
+                              <td class="dc">Ron Wyden </td>
+                              <td class= "rc">Mark Callahan </td>
                             </tr>
-                            <tr id ="Pennsylvania"class="table-active">
-                              <td>Pennsylvania</td>
-                              <td>Kate McGinty </td>
-                              <td>Pat Toomey </td>
+                            <tr id ="kjmcginty-SenToomey"class="table-active">
+                              <td class="state">Pennsylvania</td>
+                              <td class="dc">Kate McGinty </td>
+                              <td class= "rc">Pat Toomey </td>
                             </tr>
-                            <tr id ="South Carolina"class="table-active">
-                              <td>South Carolina</td>
-                              <td>Thomas Dixon </td>
-                              <td>Tim Scott </td>
+                            <tr id ="none-SenatorTimScott"class="table-active">
+                              <td class="state">South Carolina</td>
+                              <td class="dc">Thomas Dixon </td>
+                              <td class= "rc">Tim Scott </td>
                             </tr>
-                            <tr id ="South Dakota"class="table-active">
-                              <td>South Dakota</td>
-                              <td>Jay Williams </td>
-                              <td>John Thune </td>
+                            <tr id ="RealJayWilliams-SenJohnThune"class="table-active">
+                              <td class="state">South Dakota</td>
+                              <td class="dc">Jay Williams </td>
+                              <td class= "rc">John Thune </td>
                             </tr>
-                            <tr id ="Utah"class="table-active">
-                              <td>Utah</td>
-                              <td>Mike K. Snow </td>
-                              <td>Mike Lee </td>
+                            <tr id ="none-SenMikeLee"class="table-active">
+                              <td class="state">Utah</td>
+                              <td class="dc">Mike K. Snow </td>
+                              <td class= "rc">Mike Lee </td>
                             </tr> 
-                            <tr id ="Vermont"class="table-active">
-                              <td>Vermont</td>
-                              <td>Patrick Leahy </td>
-                              <td>Scott Milne </td>
+                            <tr id ="SenatorLeahy-MilneForVT"class="table-active">
+                              <td class="state">Vermont</td>
+                              <td class="dc">Patrick Leahy </td>
+                              <td class= "rc">Scott Milne </td>
                             </tr> 
-                            <tr id ="Washington"class="table-active">
-                              <td>Washington</td>
-                              <td>Patty Murray </td>
-                              <td>Chris Vance </td>
+                            <tr id ="PattyMurray-Chrisvance123"class="table-active">
+                              <td class="state">Washington</td>
+                              <td class="dc"> Patty Murray </td>
+                              <td class= "rc">Chris Vance </td>
                             </tr> 
-                            <tr id ="Wisconsin"class="table-active">
-                              <td>Wisconsin</td>
-                              <td>Russ Feingold</td>
-                              <td>Ron Johnson</td>
+                            <tr id ="russfeingold-SenRonJohnson"class="table-active">
+                              <td class="state">Wisconsin</td>
+                              <td class="dc">Russ Feingold</td>
+                              <td class= "rc">Ron Johnson</td>
                             </tr>                    
                           </tbody>
                      </table> 
-                     <button id = "go-button" type="button" class="btn btn-danger btn-lg btn-block">Predict</button>
+                     <button href="#Third-Block"id ="go-button" type="button" class="btn btn-danger btn-lg btn-block">Predict</button>
                   </div>
               </div>
 
 
               <hr class="my-4">
           </div>
+      </div>
+      <div id="Third-Block">
+        <div id="Predict-Block">
+            <h2 id="predict-title">prediction</h2>
+            <hr class="my-4">
+            <h4 id="predict-result">put response here</h4>
+              <div id="hot-words" class="card text-white bg-dark mb-3">
+                  <div class="card-header">Hot Words</div>
+                  <div class="card-body">
+                      <table class="table table-hover">
+                              <colgroup>
+                                <col style="background-color:#fff;">
+                                <col style="background-color:#f0ad4e">
+                              </colgroup>
+                          <tbody>
+                            <tr  id="hw1">
+                              <td class="state">1</td>
+                              <td class="val"> . </td>
+                            </tr>
+                           <tr  id="hw2">
+                              <td class="state">2</td>
+                              <td class="val"> . </td>
+                            </tr>
+                          <tr  id="hw3">
+                              <td class="state">3</td>
+                              <td class="val"> . </td>
+                            </tr>
+                           <tr  id="hw4">
+                              <td class="state">4</td>
+                              <td class="val"> . </td>
+                            </tr>
+                            <tr  id="hw5">
+                              <td class="state">5</td>
+                              <td class="val"> . </td>
+                            </tr>
+                           <tr  id="hw6">
+                              <td class="state">6</td>
+                              <td class="val"> . </td>
+                            </tr>
+                          <tr  id="hw7">
+                              <td class="state">7</td>
+                              <td class="val"> . </td>
+                            </tr>
+                           <tr  id="hw8">
+                              <td class="state">8</td>
+                              <td class="val"> . </td>
+                            </tr>
+                             <tr  id="hw9">
+                              <td class="state">9</td>
+                              <td class="val"> . </td>
+                            </tr>
+                           <tr  id="hw10">
+                              <td class="state">10</td>
+                              <td class="val"> . </td>
+                            </tr>
+                          </tbody>
+                     </table> 
 
 
 
+                  </div>
+              </div>
 
+        </div>
       </div>
     </div>
   </div>

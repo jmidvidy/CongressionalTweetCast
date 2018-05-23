@@ -58,8 +58,8 @@ print("------Removing old models!------")
 print("------Creating new models!------")
 
 #path elements for file access
-fullPath = "C:\\Users\\jmidv\\Documents\\Spring 2018\\EECS 338\\tweets_repo"
-fileNames = os.listdir("C:\\Users\\jmidv\\Documents\\Spring 2018\\EECS 338\\tweets_repo")
+fullPath = "C:\\Users\\jmidv\\Documents\\Spring 2018\\EECS 338\\backend\\tweets_repo"
+fileNames = os.listdir("C:\\Users\\jmidv\\Documents\\Spring 2018\\backend\\EECS 338\\tweets_repo")
 
 #counters for printers
 i = 0

@@ -64,8 +64,13 @@ $(function () {
             success: function(data){
                 console.log(data.result);
                 console.log(data.hotwords);
+                console.log(data.invalid);
+                if (data.invalid == "True") {
+                    alert("twitter user is protected or invalid.")
+                }
+                else {
                 afterResult(selected, twitter_handle,data.result, data.hotwords);
-
+                }
               },
             error: function(){ alert("FAILURE"); },
             url: "http://localhost:8000/ajax_caller"

@@ -52,17 +52,26 @@ chars = set('!@\/,.()*^%[]{}#$12345;&-+=:6\'7890')
 
 
 def classify(e, t_h):
-    ##two inputs: Later come from input
-    #dem_cand = "SenatorHassan"
-    #rep_cand = "ChuckGrassley"
+    
+    
+    
+    #two inputs: Later come from input
+    twitter_handle = "realDonaldTrump"
+    dem_cand = "SenatorHassan"
+    rep_cand = "ChuckGrassley"
     
     
     #have to get candidate from election
     
-    twitter_handle = t_h
-    el = e.split("-") #split along -
-    dem_cand = el[0]
-    rep_cand = el[1]
+#    twitter_handle = t_h
+#    
+#    print(twitter_handle)
+#    
+#    el = e.split("-") #split along -
+#    dem_cand = el[0]
+#    rep_cand = el[1]
+    
+    
     
     if dem_cand == "none" or rep_cand == "none":
         return(["none", ["no hot words in here"] ])
@@ -90,7 +99,6 @@ def classify(e, t_h):
     commonDem_words = set()
     commonRep_words= set()
     for row in testNames:
-        
         row_tweets = [] #containts tweets
         row_path = test_path + row
         #read tweets
@@ -106,8 +114,8 @@ def classify(e, t_h):
         
         #filter most common words
         curr_dict = {}
-        for elem in row_tweets:
-            s = elem[0].split(" ")
+        for elem in row_tweets[0]:
+            s = elem.split(" ")
             for w in s:
                 word = w.lower()
                 if word in stop_list:
@@ -115,7 +123,7 @@ def classify(e, t_h):
                 elif any((c in chars) for c in word):
                     continue
                 elif word not in curr_dict:
-                    curr_dict[word] = 0
+                    curr_dict[word] = 1
                 else:
                     curr_dict[word] = curr_dict[word] + 1
             
@@ -170,11 +178,9 @@ def classify(e, t_h):
             res.append("dem")
             res.append(hw_dem)
             
-        return res
+        return(res)
      
         
-    
-
     
     
     

@@ -19,6 +19,7 @@ def ajax_caller():
     twitter_handle = request.form.get("twitter_handle")
     election = request.form.get("election")
     
+    
     #get rid of first character
     a = twitter_handle[:1]
     if a == '@':
@@ -27,7 +28,10 @@ def ajax_caller():
     #call pull_tweets to pull user tweets
     p = pull_tweets.pull(twitter_handle)
     if p == 0:
-        invalid = "True" #invalid means user is either protected or incorrect twitter handle
+        invalid = "protected" #invalid means user is either protected
+        return jsonify({"result" : classification, "hotwords": hw, "invalid" : invalid})
+    elif p == 2:
+        invalid = "invalid_handle"
         return jsonify({"result" : classification, "hotwords": hw, "invalid" : invalid})
     else:
         invalid = "False"
@@ -36,7 +40,6 @@ def ajax_caller():
     cl = model_test.classify(election, twitter_handle)
     classification = cl[0]
     hw = cl[1]
-    
     
     return jsonify({"result" : classification, "hotwords": hw, "invalid" : invalid})
 

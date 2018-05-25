@@ -13,7 +13,6 @@ import os
 
 def pull(tw_ha):
     
-    
     #might have to get rid of "@" character when linked
     twitter_handle = tw_ha
         
@@ -36,7 +35,17 @@ def pull(tw_ha):
     #get tweets
     tweets = []
     th_pull = tweepy.Cursor(api.user_timeline,screen_name=twitter_handle).items(300)
+    
+    #see if th_pull operated on a valid twitter user
+    try:
+        for t in th_pull:
+            break #if iterable, then valid.  Break and move on
+    except tweepy.TweepError:
+        return(2) #not iterable, then invalid.  Return 2
+    
+    #begin iteration
     for tweet in th_pull:
+        
         #see if protected
         th_user = tweet._json["user"]    
         th_privacy = th_user["protected"] 
@@ -48,9 +57,8 @@ def pull(tw_ha):
             continue
 
         ##assemble tweets from all tweets
-        for tweet in th_pull:
-            t_j = tweet._json["text"]
-            tweets.append(t_j)
+        t_j = tweet._json["text"]
+        tweets.append(t_j)
         
     #delete all files in current json folder
     #delete all the existing models in the current directory

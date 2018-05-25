@@ -1,15 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon May 14 19:26:12 2018
+Created on Fri May 25 17:42:21 2018
 
 @author: jmidv
 """
-
-import csv
-import os
 import json
-import none_classify
-
+import os
+import csv
 
 stop_list = ["a", "about", "above", "above", "across", "after", "afterwards", "again", "against", "all", 
              "almost", "alone", "along", "already", "also","although","always","am","among", "amongst", 
@@ -49,32 +46,9 @@ stop_list = ["a", "about", "above", "above", "across", "after", "afterwards", "a
 chars = set('!@\/,.()*^%[]{}#$12345;&-+=:6\'7890')
 
 
-def classify(e, t_h):
-#    #two inputs: Later come from input
-#    twitter_handle = "realDonaldTrump"
-#    dem_cand = "SenatorHassan"
-#    rep_cand = "ChuckGrassley"
-    
-    
-    #have to get candidate from election
-    
-    twitter_handle = t_h
-    
-    print(twitter_handle)
-    
-    el = e.split("-") #split along -
-    dem_cand = el[0]
-    rep_cand = el[1]
-    
-    
-    #if a candidate in this election doesn't have a twitter, run binary handle
-    if dem_cand == "none":
-        ret = none_classify.classifyNone(rep_cand)
-        return ret
-    if rep_cand == "none":
-        ret = none_classify.classifyNone(dem_cand)
-        return ret
-    
+
+
+def classifyNone(cand):
     
     #build paths
     model_path = "C:\\Users\\jmidv\\Documents\\Spring 2018\\EECS 338\\backend\\models\\"
@@ -82,21 +56,16 @@ def classify(e, t_h):
     end_path = ".json"
     
     #combine paths
-    rep_path = model_path + rep_cand + end_path
-    dem_path = model_path + dem_cand + end_path
-    
+    cand_path = model_path + cand + end_path
     
     #load json
-    dem_dict = {}
-    rep_dict = {}
+    cand_dict = {}
     
-    rep_dict = json.load(open(rep_path))
-    dem_dict = json.load(open(dem_path))
+    cand_dict = json.load(open(cand_path))
     
     #classify
     testNames = os.listdir(test_path)
-    commonDem_words = set()
-    commonRep_words= set()
+    common_words = set()
     for row in testNames:
         row_tweets = [] #containts tweets
         row_path = test_path + row
@@ -108,8 +77,8 @@ def classify(e, t_h):
             for elem in fileListReader:
                 row_tweets.append(elem)
                 
-        countRep = 0
-        countDem = 0
+        countCand = 0
+        countNot = 0
         
         #filter most common words
         curr_dict = {}
@@ -132,73 +101,56 @@ def classify(e, t_h):
              top_ten.append(curr_max)
              del curr_dict[curr_max]
            
-        tt_r = {}
-        tt_d = {}
+        tt_cand = {}
+        tt_notCand = {}
         for tt in top_ten:
-            if tt in rep_dict and rep_dict[tt] > 20:
-                countRep = countRep + 10
-                countDem = countDem - 5
-                if tt not in tt_r:
-                    tt_r[tt] = 1
+            if tt in cand_dict:
+                countCand = countCand + 1
+                if tt not in tt_cand:
+                    tt_cand[tt] = 1
                 else:
-                    tt_r[tt] = tt_r[tt] + 1
-            if tt in dem_dict and dem_dict[tt] > 20:
-                countDem = countDem + 10
-                countRep = countRep - 5
-                if tt not in tt_d:
-                    tt_d[tt] = 1
+                    tt_cand[tt] = tt_cand[tt] + 1
+            else:
+                countNot = countNot + 1
+                if tt not in tt_notCand:
+                    tt_notCand[tt] = 1
                 else:
-                    tt_d[tt] = tt_d[tt] + 1
-    
-    
-        #extract hot words
-        hot_words_rep = sorted(tt_r, key=tt_r.get, reverse=True)
-        hot_words_dem = sorted(tt_d, key=tt_d.get, reverse=True)
-        
-        #get top 10
-        hw_rep = hot_words_rep[:10]
-        hw_dem = hot_words_dem[:10]
-                
-        total_len = len(rep_dict) + len(dem_dict)
-        
-        rep_weight = float(len(rep_dict)) / total_len
-        dem_weight = float(len(dem_dict)) / total_len
-        
-        countRep = float(countRep*rep_weight)
-        countDem = float(countDem*dem_weight)
-                
-        
-        res = []
-        print("countRep: " + str(int(countRep)) + " | countDem " + str(int(countDem)))
-        if countRep > countDem:
-            res.append("rep")
-            res.append(hw_rep)
-        else:
-            res.append("dem")
-            res.append(hw_dem)
+                    tt_notCand[tt] = tt_cand[tt] + 1
             
-        return(res)
-     
-        
+
+
+    #extract hot words
+    hot_words_cand = sorted(tt_cand, key=tt_cand.get, reverse=True)
+    hot_words_not = sorted(tt_notCand, key=tt_notCand.get, reverse=True)
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    #get top 10
+    hw_cand = hot_words_cand[:10]
+    hw_not = hot_words_not[:10]
             
+    total_len = len(tt_cand) + len(tt_notCand)
     
+    cand_weight = float(len(tt_cand)) / total_len
+    not_weight = float(len(tt_notCand)) / total_len
+    
+    countCand = float(countCand*cand_weight)
+    countNot = float(countNot*not_weight)
+    res = []
+    
+    print("countCand: " + str(int(countCand)) + " | countNot " + str(int(countNot)))
+    
+    if countCand > countNot:
+        res.append("cand")
+        res.append(hw_cand)
+    else:
+        res.append("not-cand")
+        res.append(hw_not)
+        
+    return(res)
+    
+#a = classifyNone("SenBlumenthal")
+#print(a)
 
 
 
 
-
-
+    

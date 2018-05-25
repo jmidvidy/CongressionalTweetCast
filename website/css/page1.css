@@ -5,6 +5,7 @@ html, body{
 	padding: 0px;
 	height: 100%;
 	width: 100%;
+	background-color: #f7f7f9;
 }
 
 .intro {
@@ -49,7 +50,7 @@ html, body{
 
 #main-body-Section {
 	width: 100%;
-	height: 4000px;
+	height: 4500px;
 	margin: auto;
 }
 
@@ -60,8 +61,8 @@ html, body{
 }
 
 #First-Block {
-	width: 87%;
-	height: 12.5%;
+	width: 90%;
+	height: 11.5%;
 	padding: 0;
 	margin: auto;
 }
@@ -85,11 +86,11 @@ html, body{
 
 #Second-Block {
 	width: 90%;
-	height: 54%;
+	height: 47%;
 	margin: auto;
 	color: black;
-	margin-top: 25px;
-	margin-bottom: 15rem;	
+	margin-top: .25rem;
+	
 }
 
 #Second-Block .display-3 {
@@ -109,6 +110,16 @@ html, body{
 
 #Second-Block .text-body .card {
 	height: 100%;
+}
+
+#Second-Block .card {
+	width: 75%;
+	margin: auto;
+}
+
+#Second-Block .card-body {
+	width: 100%;
+	text-align: center;
 }
 
 #Second-Block .card-body tr:hover {
@@ -142,7 +153,7 @@ html, body{
 }
 
 #Third-Block {
-	height: 30%;
+	height: 35%;
 	width: 90%;
 	margin: auto;
 }
@@ -152,14 +163,54 @@ html, body{
 	height: 80%;
 	margin: auto;
 	margin-top: 10%;
-	border: 1px solid black;
 }
 
 #hot-words {
-	width:30%;
-	height: 61%;
+	width:25%;
 	margin: auto;
 }
+
+
+#Load-Block {
+	height:20%;
+	width: 70%;
+	margin: auto;
+	margin-top: 10rem;
+	padding-top: .5rem;
+	margin-bottom: 20rem;
+}
+
+#loading {
+    font-size: 30px;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    margin-top: 20rem;
+    margin-left: 10rem;
+    background-image: url("http://i.stack.imgur.com/MnyxU.gif");
+    background-repeat: no-repeat;
+ }
+
+
+#load-text {
+	margin: auto;
+	text-align: center;
+	margin-top: 20rem;
+
+}
+
+#load-text h1 {
+	font-size: 500%;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 
 #hot-words .table {
 	margin-bottom: 0;
@@ -167,14 +218,13 @@ html, body{
 }
 
 #hot-words .card-body {
-	height:2%;
+	
 }
 
 #Third-Block .card-body tr {
 	padding: 0;
 	margin: 0;
-	box-sizing: content-box;
-	line-height: .1px;
+	line-height: .2;
 	text-align: center;
 }
 
@@ -204,9 +254,14 @@ html, body{
 
 #predict-result {
 	text-align: center;
-	margin-bottom: 5rem;
+	margin-bottom: 2rem;
 	font-size: 250%;
+}
 
+#predict-again {
+	width: 40%;
+	margin: auto;
+	margin-top: 1rem;
 }
 
 

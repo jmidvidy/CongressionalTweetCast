@@ -48,9 +48,9 @@ chars = set('!@\/,.()*^%[]{}#$12345;&-+=:6\'7890')
 
 
 #delete all the existing models in the current directory
-models = os.listdir("C:\\Users\\jmidv\\Documents\\Spring 2018\\EECS 338\\models")
+models = os.listdir("C:\\Users\\jmidv\\Documents\\Spring 2018\\EECS 338\\backend\\models")
 for f in models:
-    fp = "C:\\Users\\jmidv\\Documents\\Spring 2018\\EECS 338\\models\\" + f
+    fp = "C:\\Users\\jmidv\\Documents\\Spring 2018\\EECS 338\\backend\\models\\" + f
     os.remove(fp)
 
 print("\n")
@@ -59,7 +59,7 @@ print("------Creating new models!------")
 
 #path elements for file access
 fullPath = "C:\\Users\\jmidv\\Documents\\Spring 2018\\EECS 338\\backend\\tweets_repo"
-fileNames = os.listdir("C:\\Users\\jmidv\\Documents\\Spring 2018\\backend\\EECS 338\\tweets_repo")
+fileNames = os.listdir("C:\\Users\\jmidv\\Documents\\Spring 2018\\EECS 338\\backend\\tweets_repo")
 
 #counters for printers
 i = 0

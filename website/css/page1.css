@@ -185,13 +185,17 @@ html, body{
     top: 0;
     left: 0;
     z-index: 100;
+    background-position: center; 
     width: 200px;
     height: 200px;
-    margin: auto;
+    margin:0 auto;
     margin-top: 20rem;
-    margin-left: 10rem;
     background-image: url("http://i.stack.imgur.com/MnyxU.gif");
     background-repeat: no-repeat;
+ }
+
+ #loading-container {
+ 	margin: auto;
  }
 
 

@@ -94,6 +94,7 @@ This python file uses tweepy to perform error checking on the input from the fro
 
 
     model_path = "C:\\Users\\jmidv\\Documents\\Spring 2018\\EECS 338\\backend\\models\\"
+    
     test_path = "C:\\Users\\jmidv\\Documents\\Spring 2018\\EECS 338\\backend\\user_tweets\\"
   
 2. Have python3 installed.  (do $py -m --V) from the command line to check this.

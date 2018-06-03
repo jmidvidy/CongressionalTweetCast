@@ -139,7 +139,7 @@ function validTwitterHandle(t_h){
     else if (t_h.indexOf(' ') > -1){ //contains a space
         return 0
     }
-    var charset = ",./-;'[]\"`~!#$%^&*()_+{}:<>?";
+    var charset = ",./-;'[]\"`~!#$%^&*()+{}:<>?";
     var i;
     for (i=0; i < charset.length; i++) {
         var curr_char = charset.charAt(i);

@@ -75,16 +75,35 @@ When an inputted user's tweets are pulled, those tweets are then stored in this 
 
 ##### ajax_caller.py
 
-This python file launches the local server 
+This python file launches the local server to run this project locally.  You will need python3 and Flask installed to perform this.
 ##### build_NBC.py
+This python file envokes the main classifier.  When called, it will classify the given inputs.
 ##### model_test.py
+This python file constructs new models.  It can be used to update the store of models.  It is not called by front-end input.
 ##### none_classify.py
+This python file classifies an election when one candidate does not have a twitter-handle.  Rather than comparing scores between each candidate, it just says whether the inputted twitter handle will or will not vote for the candidate in the specified election that does have a twitter handle.
 ##### pull_tweets.py
+This python file uses tweepy to pull the relevant tweets from Twitter.
 ##### username_checker.py
+This python file uses tweepy to perform error checking on the input from the front-end.
+
+## Running Locally
+
+1. Update Paths
+   - You will need to update these two paths on your machine.  Change to YOURPATH from the start to ..\\\EECS 338.
 
 
+    model_path = "C:\\Users\\jmidv\\Documents\\Spring 2018\\EECS 338\\backend\\models\\"
+    test_path = "C:\\Users\\jmidv\\Documents\\Spring 2018\\EECS 338\\backend\\user_tweets\\"
+  
+2. Have python3 installed.  (do $py -m --V) from the command line to check this.
+3. Have Flask installed.  (do $py -m pip install Flask). If already installed (typically is), this command will tell you.
+4. Open a command prompt/terminal, and cd into the project directory, and then cd into the backend.
+   - Then do, $py ajax_caller.py
+   - This will create  a local host with Flask than can serve Ajax requests.  I have it set to port 8000.
+5. Then, open a second command prompt/terminal, and cd into the project directory, and the cd into the website directory.
+   - Then do, $py -m http.server 8001
+   - This will create a local host on port 8001.  Since the website has an "index.html" file, it will automatically load the website.  Note: you cannot create this server on 8000 as that is already being used to serve the flask (doing this will make the project not work.)
+6.  Finally, go to your browser (preferably Google Chrome) and do $localhost:8001 which will open the website.
 
-
-	
-
-
+If you have any problem with the website, the two command prompts will print out errors when they are triggered (watch out for Tweepy rate limits!).

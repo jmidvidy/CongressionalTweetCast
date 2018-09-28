@@ -25,9 +25,7 @@ def pull(tw_ha):
     auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
     api = tweepy.API(auth)
     
-    print("\n")
-    print("\n")
-    print("\n")
+    print(tw_ha)
     
     #ADD check to see if inputted user is valid 
     
@@ -62,9 +60,9 @@ def pull(tw_ha):
         
     #delete all files in current json folder
     #delete all the existing models in the current directory
-    curr_models = os.listdir("C:\\Users\\jmidv\\Documents\\Spring 2018\\EECS 338\\backend\\user_tweets")
+    curr_models = os.listdir(".\\user_tweets")
     for f in curr_models:
-        fp = "C:\\Users\\jmidv\\Documents\\Spring 2018\\EECS 338\\backend\\user_tweets\\" + f
+        fp = ".\\user_tweets\\" + f
         os.remove(fp)
 
     

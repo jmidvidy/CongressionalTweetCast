@@ -51,8 +51,8 @@ chars = set('!@\/,.()*^%[]{}#$12345;&-+=:6\'7890')
 def classifyNone(cand):
     
     #build paths
-    model_path = "C:\\Users\\jmidv\\Documents\\Spring 2018\\EECS 338\\backend\\models\\"
-    test_path = "C:\\Users\\jmidv\\Documents\\Spring 2018\\EECS 338\\backend\\user_tweets\\" #tweets from inputted user
+    model_path = ".\\models\\"
+    test_path = ".\\user_tweets\\" #tweets from inputted user
     end_path = ".json"
     
     #combine paths

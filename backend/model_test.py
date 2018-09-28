@@ -67,6 +67,8 @@ def classify(e, t_h):
     rep_cand = el[1]
     
     
+    
+    
     #if a candidate in this election doesn't have a twitter, run binary handle
     if dem_cand == "none":
         ret = none_classify.classifyNone(rep_cand)
@@ -77,8 +79,8 @@ def classify(e, t_h):
     
     
     #build paths
-    model_path = "C:\\Users\\jmidv\\Documents\\Spring 2018\\EECS 338\\backend\\models\\"
-    test_path = "C:\\Users\\jmidv\\Documents\\Spring 2018\\EECS 338\\backend\\user_tweets\\" #tweets from inputted user
+    model_path = ".\\models\\"
+    test_path = ".\\user_tweets\\" #tweets from inputted user
     end_path = ".json"
     
     #combine paths

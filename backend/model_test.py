@@ -66,9 +66,7 @@ def classify(e, t_h):
     dem_cand = el[0]
     rep_cand = el[1]
     
-    
-    
-    
+ 
     #if a candidate in this election doesn't have a twitter, run binary handle
     if dem_cand == "none":
         ret = none_classify.classifyNone(rep_cand)

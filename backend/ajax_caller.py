@@ -8,7 +8,7 @@ import pull_tweets
 app = Flask(__name__)
 CORS(app)
 
-@app.route("/ajax_caller", methods=['POST'])
+@app.route("/", methods=['POST'])
 def ajax_caller():
     
     #instantiate
@@ -44,7 +44,7 @@ def ajax_caller():
     return jsonify({"result" : classification, "hotwords": hw, "invalid" : invalid})
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=8000)
+    app.run(host="0.0.0.0", port=80)
 
 
 

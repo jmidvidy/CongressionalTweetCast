@@ -110,6 +110,8 @@ $(function () {
             withCredentials: "true",
             jsonpCallback: 'callback',
             success: function(data){
+            	alert("success!!!")
+		/*
                 console.log(data.invalid);
                 if (data.invalid == "invalid_handle") {
                     //alert("twitter user is protected or invalid.")
@@ -121,9 +123,10 @@ $(function () {
                 else {
                 afterResult(election, twitter_handle, data.result, data.hotwords);
                 }
+        */
               },
             error: function(){ alert("FAILURE"); },
-            url: "http://localhost:8000/ajax_caller"
+            url: "http://ec2-18-236-161-105.us-west-2.compute.amazonaws.com/ajax_caller"
         });
     });
 });

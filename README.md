@@ -10,7 +10,7 @@ This website will then deploy sophisticated algorithms to analyze the inputted t
 
 Our algorithms are built off tweepy, machine learning in python (more specifically text analysis through a Naive Bayes Classifier), as well as your standard web tools like HTML, JavaScript, and jQuery.
 
-Permanent Online Link: <Coming Soon>
+Permanent Online Link: (Coming Soon)
 
 ## Contents
 

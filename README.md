@@ -10,6 +10,8 @@ This website will then deploy sophisticated algorithms to analyze the inputted t
 
 Our algorithms are built off tweepy, machine learning in python (more specifically text analysis through a Naive Bayes Classifier), as well as your standard web tools like HTML, JavaScript, and jQuery.
 
+Permanent Online Link: <Coming Soon>
+
 ## Contents
 
 Within this folder are two main directories:
@@ -88,23 +90,15 @@ This python file uses tweepy to pull the relevant tweets from Twitter.
 This python file uses tweepy to perform error checking on the input from the front-end.
 
 ## Running Locally
-
-1. Update Paths
-   - You will need to update these two paths on your machine.  Change to YOURPATH from the start to ..\\\EECS 338.
-
-
-    model_path = "C:\\Users\\jmidv\\Documents\\Spring 2018\\EECS 338\\backend\\models\\"
-    
-    test_path = "C:\\Users\\jmidv\\Documents\\Spring 2018\\EECS 338\\backend\\user_tweets\\"
   
-2. Have python3 installed.  (do $py -m --V) from the command line to check this.
-3. Have Flask installed.  (do $py -m pip install Flask). If already installed (typically is), this command will tell you.
-4. Open a command prompt/terminal, and cd into the project directory, and then cd into the backend.
+1. Have python3 installed.  (do $py -m --V) from the command line to check this.
+2. Have Flask installed.  (do $py -m pip install Flask). If already installed (typically is), this command will tell you.
+3. Open a command prompt/terminal, and cd into the project directory, and then cd into the backend.
    - Then do, $py ajax_caller.py
    - This will create  a local host with Flask than can serve Ajax requests.  I have it set to port 8000.
-5. Then, open a second command prompt/terminal, and cd into the project directory, and the cd into the website directory.
+4. Then, open a second command prompt/terminal, and cd into the project directory, and the cd into the website directory.
    - Then do, $py -m http.server 8001
    - This will create a local host on port 8001.  Since the website has an "index.html" file, it will automatically load the website.  Note: you cannot create this server on 8000 as that is already being used to serve the flask (doing this will make the project not work.)
-6.  Finally, go to your browser (preferably Google Chrome) and do $localhost:8001 which will open the website.
+5.  Finally, go to your browser (preferably Google Chrome) and do $localhost:8001 which will open the website.
 
 If you have any problem with the website, the two command prompts will print out errors when they are triggered (watch out for Tweepy rate limits!).

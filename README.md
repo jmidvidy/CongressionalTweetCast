@@ -10,8 +10,7 @@ This website will then deploy sophisticated algorithms to analyze the inputted t
 
 Our algorithms are built off tweepy, machine learning in python (more specifically text analysis through a Naive Bayes Classifier), as well as your standard web tools like HTML, JavaScript, and jQuery.
 
-Permanent Online Link: http://bit.do/CongressionalTweetCast
-
+Permanent Online Link: https://rebrand.ly/NUCongressionalTweetCast
 ## Contents
 
 Within this folder are two main directories:
